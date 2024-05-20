@@ -8,11 +8,13 @@ import Bookcase from './pages/Bookcase';
 import Manage from './pages/Manage';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, path: '/', element: <Home /> },
 
