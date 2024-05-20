@@ -1,0 +1,513 @@
+{
+  "books": [
+    {
+      "kind": "books#volume",
+      "id": "rCU3EAAAQBAJ",
+      "etag": "t43uGLZamkc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/rCU3EAAAQBAJ",
+      "volumeInfo": {
+        "title": "The Paris Apartment",
+        "subtitle": "A Novel",
+        "authors": ["Lucy Foley"],
+        "publisher": "HarperCollins",
+        "publishedDate": "2022-02-22",
+        "description": "THE #1 NEW YORK TIMES BESTSELLER “Told in rotating points of view, this Tilt-A-Whirl of a novel brims with jangly tension – an undeniably engrossing guessing game.” — Vogue \"[A] clever, cliff-hanger-filled thriller.\" — People From the New York Times bestselling author of The Guest List comes a new locked room mystery, set in a Paris apartment building in which every resident has something to hide… Jess needs a fresh start. She’s broke and alone, and she’s just left her job under less than ideal circumstances. Her half-brother Ben didn’t sound thrilled when she asked if she could crash with him for a bit, but he didn’t say no, and surely everything will look better from Paris. Only when she shows up – to find a very nice apartment, could Ben really have afforded this? – he’s not there. The longer Ben stays missing, the more Jess starts to dig into her brother’s situation, and the more questions she has. Ben’s neighbors are an eclectic bunch, and not particularly friendly. Jess may have come to Paris to escape her past, but it’s starting to look like it’s Ben’s future that’s in question. The socialite – The nice guy – The alcoholic – The girl on the verge – The concierge Everyone's a neighbor. Everyone's a suspect. And everyone knows something they’re not telling.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780063003071"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0063003074"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 379,
+        "printType": "BOOK",
+        "categories": ["Fiction"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.7.7.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=rCU3EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=rCU3EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=rCU3EAAAQBAJ&printsec=frontcover&dq=paris+apartment&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=rCU3EAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=rCU3EAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 14.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 14.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=rCU3EAAAQBAJ&rdid=book-rCU3EAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 14990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 14990000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/The_Paris_Apartment-sample-epub.acsm?id=rCU3EAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=rCU3EAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Don&#39;t miss Lucy Foley&#39;s new book, The Midnight Feast, coming June 18th!"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "m2JSDwAAQBAJ",
+      "etag": "YHUrTTR8l9E",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/m2JSDwAAQBAJ",
+      "volumeInfo": {
+        "title": "인생에서 너무 늦은 때란 없습니다",
+        "authors": ["애나 메리 로버트슨 모지스"],
+        "publisher": "수오서재",
+        "publishedDate": "2017-12-16",
+        "description": "늦었다고 좌절하고 초조해하는 우리에게 모지스 할머니가 전하는 위로와 응원의 메시지! 평생을 농장 아낙으로 살며 소일거리 삼아 자수를 놓다가 관절염 때문에 바늘을 들기 어려워지자 붓을 들어 그림을 그리기 시작한 애나 메리 로버트슨 모지스. 76세에 그림을 그리기 시작해 80세에 개인전을 열고, 100세에 세계적인 화가가 된 일명 ‘모지스 할머니’라 불리는 저자가 92세에 출간한 자서전과 사랑 넘치는 그림 67점을 모아 엮은 『인생에서 너무 늦은 때란 없습니다』. 1부에서는 제대로 된 이름으로 불리지 못하고, 생일이 무언지 알지 못한 채 그저 여동생의 요람을 흔들고, 숲속에서 꽃을 꺾으며 지낸 행복한 일들부터, 12살에 가정부가 되어야 했던 힘든 시절을 회상한다. 2부에서는 남편인 토마스 모지스와 결혼해 남부 지역으로 터를 옮겨 열 명의 아이 중 살아남은 다섯 아이들을 살뜰히 키우며 바지런히 보내기까지의 이야기를 들려준다. 3부에서는 자녀들을 모두 결혼시키고, 비로소 그림을 그리기 시작하면서 경험한 일들로 채워져 있다. 라디오 출연부터 트루먼 대통령을 만나 상을 받게 된 이야기까지 흥미로운 나날들이 이어진다. 모든 사람이 늦었다고 말할 때면 무언가를 시작하기엔 지금이 제일 좋은 때라고 이야기하던 저자가 직접 써내려간 삶은 화려하거나 거창하지 않다. 마치 우리네 인생처럼 그저 매일에 충실하고 변하는 계절에 순응하며 그 안에서 기쁨을 찾는 소박한 일상의 연속이다. 그럼에도 불구하고 저자의 따뜻한 그림과 삶에 대한 믿음 그리고 진취적인 자세는 동시대를 넘어 지금까지도 우리 곁에 생생히 남아 희망이 되어준다.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9791187498223"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 265,
+        "printType": "BOOK",
+        "categories": ["Literary Collections"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.2.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=m2JSDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=m2JSDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "ko",
+        "previewLink": "http://books.google.co.kr/books?id=m2JSDwAAQBAJ&printsec=frontcover&dq=%EC%9D%B8%EC%83%9D%EC%97%90%EC%84%9C+%EB%84%88%EB%AC%B4+%EB%8A%A6%EC%9D%80+%EB%95%8C%EB%9E%80+%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4&hl=&cd=4&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=m2JSDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=m2JSDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "KR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 9500,
+          "currencyCode": "KRW"
+        },
+        "retailPrice": {
+          "amount": 8550,
+          "currencyCode": "KRW"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=m2JSDwAAQBAJ&rdid=book-m2JSDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 9500000000,
+              "currencyCode": "KRW"
+            },
+            "retailPrice": {
+              "amountInMicros": 8550000000,
+              "currencyCode": "KRW"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "KR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.kr/books/download/%EC%9D%B8%EC%83%9D%EC%97%90%EC%84%9C_%EB%84%88%EB%AC%B4_%EB%8A%A6%EC%9D%80_%EB%95%8C%EB%9E%80_%EC%97%86%EC%8A%B5-sample-epub.acsm?id=m2JSDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.kr/books/download/%EC%9D%B8%EC%83%9D%EC%97%90%EC%84%9C_%EB%84%88%EB%AC%B4_%EB%8A%A6%EC%9D%80_%EB%95%8C%EB%9E%80_%EC%97%86%EC%8A%B5-sample-pdf.acsm?id=m2JSDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=m2JSDwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "늦었다고 좌절하고 초조해하는 우리에게 모지스 할머니가 전하는 위로와 응원의 메시지! 평생을 농장 아낙으로 살며 소일거리 삼아 자수를 놓다가 관절염 때문에 바늘을 들기 ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "PAMODAAAQBAJ",
+      "etag": "MWwYtH8yZ4A",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/PAMODAAAQBAJ",
+      "volumeInfo": {
+        "title": "Grit",
+        "subtitle": "The Power of Passion and Perseverance",
+        "authors": ["Angela Duckworth"],
+        "publisher": "Simon and Schuster",
+        "publishedDate": "2016-05-03",
+        "description": "\"Why do some people succeed and others fail? Sharing new insights from her landmark research on grit, MacArthur genius grant recipient Angela Duckworth explains why talent is hardly a guarantor of success. Rather, other factors can be even more crucial, such as identifying our passions and following through on our commitments. Drawing on her own story as the daughter of a scientist who frequently bemoaned her lack of smarts, Duckworth describes her winding path through teaching, business consulting, and neuroscience, which led to the hypothesis that what really drives success is not \"genius\" but a special blend of passion and long-term perseverance. As a professor at the University of Pennsylvania, Duckworth created her own \"character lab\" and set out to test her theory. Here, she takes readers into the field to visit teachers working in some of the toughest schools, cadets struggling through their first days at West Point, and young finalists in the National Spelling Bee. Finally, she shares what she's learned from interviewing dozens of high achievers--from JP Morgan CEO Jamie Dimon to Bob Mankoff, cartoon editor of The New Yorker, to Seattle Seahawks Coach Pete Carroll. Grit is a book about what goes through your head when you fall down, and how that--not talent or luck--makes all the difference\"--",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781501111105"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1501111108"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 352,
+        "printType": "BOOK",
+        "categories": ["Business & Economics"],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.5.0.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=PAMODAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=PAMODAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=PAMODAAAQBAJ&printsec=frontcover&dq=grit&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=PAMODAAAQBAJ&dq=grit&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Grit.html?hl=&id=PAMODAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=PAMODAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "&quot;Why do some people succeed and others fail? Sharing new insights from her landmark research on grit, MacArthur genius grant recipient Angela Duckworth explains why talent is hardly a guarantor of success."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "fnGoEAAAQBAJ",
+      "etag": "bgyYm/Ls7ow",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/fnGoEAAAQBAJ",
+      "volumeInfo": {
+        "title": "조셉 머피 끌어당김의 기적",
+        "authors": ["조셉 머피 (Joseph Murphy)"],
+        "publisher": "다산북스",
+        "publishedDate": "2023-01-20",
+        "description": "“『시크릿』보다 30년 앞선 끌어당김의 바이블!” 동서양 우주의 원리에서 발견한 시대를 뛰어넘는 통찰과 교훈! ‘잠재의식의 아버지’ ‘세계적인 영적 스승’ ‘성공학의 대가’ 조셉 머피가 풀어 쓴 우주 에너지와 끌어당김의 비밀! *** 전 세계 17개국 번역, 시리즈 누계 수백만 부 판매! *** *** 60년간 읽혀 온 역사상 가장 뛰어난 자기계발서 시리즈 *** *** 조셉 머피 재단이 인정한 세계 유일의 공식 저서 번역본! *** *** 조셉 머피의 주역 해설 최초 공개! *** ‘잠재의식의 아버지’라고 불리며 잠재의식을 활용한 다양한 기법의 선구자로 평가되고, 20세기 중반에 가장 많이 팔린 작가 중 한 명으로서 ‘성공학의 대가’로 인정받는 조셉 머피 박사! 조셉 머피 박사는 신학을 비롯해 아시아의 종교와 동양 철학, 법학, 의학 등을 바탕으로 잠재의식을 분석해 성공에 이르는 방법을 깨달은 이후 이 아이디어를 수백만 명의 사람들과 나누며 그들의 성공 경험을 다시 잠재의식의 활용 기법에 도입하는 것을 반복해왔다. 이를 통해 잠재의식을 활용하는 가장 올바른 방법을 깨닫고, 이를 다시 저술과 강연을 통해 세계 여러 나라의 사람들과 나누어왔다. 『조셉 머피 끌어당김의 기적』은 잠재의식에 관한 조셉 머피의 모든 지식과 통찰이 총망라된 ‘조셉 머피 잠재의식의 고전’ 시리즈의 네 번째 책이다. 이 책의 키워드는 ‘끌어당김’이다. 세상을 움직이는 우주의 법칙이 곧 나에게서 출발함을 알려주고, 내 안의 우주 에너자이저의 존재를 깨달은 후 우주의 법칙에 따라 이를 활용하는 방법을 알려준다. 특히 책의 제3부에서는 우주의 원리를 해설한 동양의 오래된 지혜 『주역』을 성직자의 시각에서 서양의 사상적 근원인 『성경』을 기반으로 풀이하고 있어 동서양 고전의 크로스오버라고 할 수 있다. ‘조셉 머피 잠재의식의 고전’ 시리즈는 조셉 머피 재단에서 인정받은 유일한 공식 저서로, 펭귄위즈덤하우스에서 출간한 10권을 각각 주제별로 묶어 5권으로 재편집한 것이다. 시리즈 첫 번째 책인 『조셉 머피 부의 초월자』는 부와 잠재의식의 상관관계를 밝힌 것으로 출간 즉시 베스트셀러에 올랐으며, 두 번째 책인 『조셉 머피 성공의 연금술』은 수많은 성공자에게서 배운 자기 확신의 힘에 대해 이야기한다. 세 번째 책인 『조셉 머피 영적 성장의 비밀』은 잠재의식을 움직이는 근원을 믿음으로 보고 주기적이고 체계적인 기도를 통해 마음의 품격을 올리는 방법을 알려준다. 조셉 머피가 40년 이상 연구해온 잠재의식에 관한 통찰을 모두 담은 이 시리즈는 21세기의 감성을 반영한 최신 개정판으로서 번역부터 편집까지 1년 이상 공들여 만든 국내 최초의 번역본이다.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9791130697031"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 854,
+        "printType": "BOOK",
+        "categories": ["Business & Economics"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=fnGoEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=fnGoEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "ko",
+        "previewLink": "http://books.google.co.kr/books?id=fnGoEAAAQBAJ&printsec=frontcover&dq=%EC%A1%B0%EC%85%89+%EB%A8%B8%ED%94%BC&hl=&cd=3&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=fnGoEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=fnGoEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "KR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 15400,
+          "currencyCode": "KRW"
+        },
+        "retailPrice": {
+          "amount": 13860,
+          "currencyCode": "KRW"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=fnGoEAAAQBAJ&rdid=book-fnGoEAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 15400000000,
+              "currencyCode": "KRW"
+            },
+            "retailPrice": {
+              "amountInMicros": 13860000000,
+              "currencyCode": "KRW"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "KR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.kr/books/download/%EC%A1%B0%EC%85%89_%EB%A8%B8%ED%94%BC_%EB%81%8C%EC%96%B4%EB%8B%B9%EA%B9%80%EC%9D%98_%EA%B8%B0%EC%A0%81-sample-epub.acsm?id=fnGoEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.kr/books/download/%EC%A1%B0%EC%85%89_%EB%A8%B8%ED%94%BC_%EB%81%8C%EC%96%B4%EB%8B%B9%EA%B9%80%EC%9D%98_%EA%B8%B0%EC%A0%81-sample-pdf.acsm?id=fnGoEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=fnGoEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "“『시크릿』보다 30년 앞선 끌어당김의 바이블!” 동서양 우주의 원리에서 발견한 시대를 뛰어넘는 통찰과 교훈! ‘잠재의식의 아버지’ ‘세계적인 영적 스승’ ‘성공학의 ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "AifhDwAAQBAJ",
+      "etag": "6KLee0pCBzM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/AifhDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Principles for Dealing with the Changing World Order",
+        "subtitle": "Why Nations Succeed and Fail",
+        "authors": ["Ray Dalio"],
+        "publisher": "Simon and Schuster",
+        "publishedDate": "2021-11-30",
+        "description": "NEW YORK TIMES BESTSELLER * MORE THAN ONE MILLION COPIES SOLD “A provocative read...There are few tomes that coherently map such broad economic histories as well as Mr. Dalio’s. Perhaps more unusually, Mr. Dalio has managed to identify metrics from that history that can be applied to understand today.” —Andrew Ross Sorkin, The New York Times From legendary investor Ray Dalio, author of the #1 New York Times bestseller Principles, who has spent half a century studying global economies and markets, Principles for Dealing with the Changing World Order examines history’s most turbulent economic and political periods to reveal why the times ahead will likely be radically different from those we’ve experienced in our lifetimes—and to offer practical advice on how to navigate them well. A few years ago, Ray Dalio noticed a confluence of political and economic conditions he hadn’t encountered before. They included huge debts and zero or near-zero interest rates that led to massive printing of money in the world’s three major reserve currencies; big political and social conflicts within countries, especially the US, due to the largest wealth, political, and values disparities in more than 100 years; and the rising of a world power (China) to challenge the existing world power (US) and the existing world order. The last time that this confluence occurred was between 1930 and 1945. This realization sent Dalio on a search for the repeating patterns and cause/effect relationships underlying all major changes in wealth and power over the last 500 years. In this remarkable and timely addition to his Principles series, Dalio brings readers along for his study of the major empires—including the Dutch, the British, and the American—putting into perspective the “Big Cycle” that has driven the successes and failures of all the world’s major countries throughout history. He reveals the timeless and universal forces behind these shifts and uses them to look into the future, offering practical principles for positioning oneself for what’s ahead.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781982164799"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1982164794"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 594,
+        "printType": "BOOK",
+        "categories": ["Business & Economics"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "3.14.11.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=AifhDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=AifhDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=AifhDwAAQBAJ&printsec=frontcover&dq=ray+dalio&hl=&cd=3&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=AifhDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=AifhDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 16.99,
+          "currencyCode": "USD"
+        },
+        "retailPrice": {
+          "amount": 16.99,
+          "currencyCode": "USD"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=AifhDwAAQBAJ&rdid=book-AifhDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 16990000,
+              "currencyCode": "USD"
+            },
+            "retailPrice": {
+              "amountInMicros": 16990000,
+              "currencyCode": "USD"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Principles_for_Dealing_with_the_Changing-sample-epub.acsm?id=AifhDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=AifhDwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Perhaps more unusually, Mr. Dalio has managed to identify metrics from that history that can be applied to understand today.” —Andrew Ross Sorkin, The New York Times From legendary investor Ray Dalio, author of the #1 New York Times ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "TWmmzgEACAAJ",
+      "etag": "1Q2bP98ncsk",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/TWmmzgEACAAJ",
+      "volumeInfo": {
+        "title": "The Guest List",
+        "authors": ["Lucy Foley"],
+        "publisher": "William Morrow",
+        "publishedDate": "2022-06-28",
+        "description": "A REESE'S BOOK CLUB PICK THE NEW YORK TIMES BESTSELLER ONE OF THE NEW YORK TIMES BEST THRILLERS OF THE YEAR \"I loved this book. It gave me the same waves of happiness I get from curling up with a classic Christie...The alternating points of view keep you guessing, and guessing wrong.\" -- Alex Michaelides, #1 New York Times bestselling author of The Silent Patient \"Evok[es] the great Agatha Christie classics...Pay close attention to seemingly throwaway details about the characters' pasts. They are all clues.\" -- New York Times Book Review A wedding celebration turns dark and deadly in this deliciously wicked and atmospheric thriller reminiscent of Agatha Christie from the New York Times bestselling author of The Hunting Party. The bride - The plus one - The best man - The wedding planner - The bridesmaid - The body On an island off the coast of Ireland, guests gather to celebrate two people joining their lives together as one. The groom: handsome and charming, a rising television star. The bride: smart and ambitious, a magazine publisher. It's a wedding for a magazine, or for a celebrity: the designer dress, the remote location, the luxe party favors, the boutique whiskey. The cell phone service may be spotty and the waves may be rough, but every detail has been expertly planned and will be expertly executed. But perfection is for plans, and people are all too human. As the champagne is popped and the festivities begin, resentments and petty jealousies begin to mingle with the reminiscences and well wishes. The groomsmen begin the drinking game from their school days. The bridesmaid not-so-accidentally ruins her dress. The bride's oldest (male) friend gives an uncomfortably caring toast. And then someone turns up dead. Who didn't wish the happy couple well? And perhaps more important, why?",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0063215381"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780063215382"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 384,
+        "printType": "BOOK",
+        "categories": ["Fiction"],
+        "averageRating": 4,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=TWmmzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=TWmmzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=TWmmzgEACAAJ&dq=lucy+foley&hl=&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=TWmmzgEACAAJ&dq=lucy+foley&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Guest_List.html?hl=&id=TWmmzgEACAAJ"
+      },
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "US",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=TWmmzgEACAAJ&hl=&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Includes an excerpt for The Paris apartment."
+      }
+    }
+  ]
+}
