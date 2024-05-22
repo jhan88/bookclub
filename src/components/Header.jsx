@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser, userSignIn, userSignOut } from '../api/firebase';
+import UserPhoto from './ui/UserPhoto';
 
 export default function Header() {
   const [user, setUser] = useState(null);
@@ -36,6 +37,9 @@ export default function Header() {
             <button onClick={() => (user ? userSignOut() : userSignIn())}>
               {user ? 'Sign out' : 'Sign in'}
             </button>
+          </li>
+          <li className="shrink-0">
+            <UserPhoto user={user} />
           </li>
         </ul>
       </nav>
