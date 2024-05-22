@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { getUser, userSignIn, userSignOut } from '../api/firebase';
+import { useUserContext } from '../context/UserContext';
 import UserPhoto from './ui/UserPhoto';
 
 export default function Header() {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    getUser((user) => {
-      if (user) {
-        const { email, displayName, photoURL, uid } = user;
-        const isAdmin = uid === process.env.REACT_APP_FIREBASE_adminUid;
-        setUser({ email, displayName, photoURL, uid, isAdmin });
-      } else {
-        setUser(null);
-      }
-    });
-  }, []);
+  const { user, signIn, signOut } = useUserContext();
 
   return (
     <header className="p-4 flex justify-between items-center bg-brand-dark text-white">
@@ -39,7 +27,7 @@ export default function Header() {
             </li>
           )}
           <li className="p-1 border-b border-transparent hover:text-brand-accent hover:border-brand-accent">
-            <button onClick={() => (user ? userSignOut() : userSignIn())}>
+            <button onClick={() => (user ? signOut() : signIn())}>
               {user ? 'Sign out' : 'Sign in'}
             </button>
           </li>
