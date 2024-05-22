@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getUser, userSignIn, userSignOut } from '../api/firebase';
 
 export default function Header() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    getUser((user) => {
+      if (user) {
+        const { email, displayName, photoURL, uid } = user;
+        setUser({ email, displayName, photoURL, uid });
+      } else {
+        setUser(null);
+      }
+    });
+  }, []);
+
   return (
     <header className="p-4 flex justify-between items-center bg-brand-dark text-white">
       <h1 className="p-1 font-bold text-lg">
@@ -19,7 +33,9 @@ export default function Header() {
             <Link to="manage">Manage</Link>
           </li>
           <li className="p-1 border-b border-transparent hover:text-brand-accent hover:border-brand-accent">
-            <button>SignIn</button>
+            <button onClick={() => (user ? userSignOut() : userSignIn())}>
+              {user ? 'Sign out' : 'Sign in'}
+            </button>
           </li>
         </ul>
       </nav>
