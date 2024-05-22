@@ -10,7 +10,8 @@ export default function Header() {
     getUser((user) => {
       if (user) {
         const { email, displayName, photoURL, uid } = user;
-        setUser({ email, displayName, photoURL, uid });
+        const isAdmin = uid === process.env.REACT_APP_FIREBASE_adminUid;
+        setUser({ email, displayName, photoURL, uid, isAdmin });
       } else {
         setUser(null);
       }
