@@ -28,12 +28,16 @@ export default function Header() {
           <li className="p-1 border-b border-transparent hover:text-brand-accent hover:border-brand-accent">
             <Link to="/">Home</Link>
           </li>
-          <li className="p-1 border-b border-transparent hover:text-brand-accent hover:border-brand-accent">
-            <Link to={`bookcase/:uid`}>My Bookcase</Link>
-          </li>
-          <li className="p-1 border-b border-transparent hover:text-brand-accent hover:border-brand-accent">
-            <Link to="manage">Manage</Link>
-          </li>
+          {user && (
+            <li className="p-1 border-b border-transparent hover:text-brand-accent hover:border-brand-accent">
+              <Link to={'bookcase/' + user.uid}>My Bookcase</Link>
+            </li>
+          )}
+          {user && user.isAdmin && (
+            <li className="p-1 border-b border-transparent hover:text-brand-accent hover:border-brand-accent">
+              <Link to="manage">Manage</Link>
+            </li>
+          )}
           <li className="p-1 border-b border-transparent hover:text-brand-accent hover:border-brand-accent">
             <button onClick={() => (user ? userSignOut() : userSignIn())}>
               {user ? 'Sign out' : 'Sign in'}
