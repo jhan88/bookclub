@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Detail from './pages/Detail';
 import Bookcase from './pages/Bookcase';
 import Manage from './pages/Manage';
+import ProtectedRoute from './pages/ProtectedRoute';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import ErrorPage from './pages/ErrorPage';
@@ -21,9 +22,20 @@ const router = createBrowserRouter([
       { path: 'book/:bookId', element: <Detail /> },
       {
         path: 'bookcase/:uid',
-        element: <Bookcase />,
+        element: (
+          <ProtectedRoute>
+            <Bookcase />
+          </ProtectedRoute>
+        ),
       },
-      { path: 'manage', element: <Manage /> },
+      {
+        path: 'manage',
+        element: (
+          <ProtectedRoute requireAdmin={true}>
+            <Manage />
+          </ProtectedRoute>
+        ),
+      },
     ],
   },
 ]);
