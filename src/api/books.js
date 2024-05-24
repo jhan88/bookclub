@@ -1,19 +1,31 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://www.googleapis.com/books/v1/volumes',
+  baseURL: 'https://www.googleapis.com/books/v1/',
   params: { maxResults: 40 },
 });
 
 function createSearchTerm(keyword) {
-  return keyword.replace(' ', '+');
+  const searchTerm = Object.entries(keyword)
+    .filter(([param, _]) => !['q', 'country', 'langRestrict'].includes(param))
+    .reduce((prev, [param, value]) => {
+      if (!value) {
+        return prev;
+      }
+      return prev + (prev ? '+' : '') + param + ':' + value;
+    }, keyword.q)
+    .replace(' ', '+');
+  return searchTerm;
 }
 
 export async function search(keyword) {
   return await instance
-    .get('/', {
+    .get('volumes', {
       params: {
         q: createSearchTerm(keyword),
+        langRestrict:
+          keyword.langRestrict && keyword.langRestrict.toLowerCase(),
+        country: keyword.country && keyword.country.toUpperCase(),
       },
     })
     .then((res) => res.data)
@@ -39,14 +51,14 @@ export async function search(keyword) {
 
           return {
             id,
-            thumbnail,
+            thumbnail: thumbnail || null,
             title,
-            subtitle,
-            authors,
-            publisher,
+            subtitle: subtitle || null,
+            authors: authors || null,
+            publisher: publisher || null,
             infoLink,
             selfLink,
-            industryIdentifiers,
+            industryIdentifiers: industryIdentifiers || null,
           };
         });
       }

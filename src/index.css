@@ -19,3 +19,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+section {
+  @apply p-4;
+}
+
+@layer components {
+  .register-book__input {
+    @apply basis-full my-1 p-2 rounded outline-none border focus:border-brand-accent;
+  }
+}
