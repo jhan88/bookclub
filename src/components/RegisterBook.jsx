@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { search } from '../api/books';
 import ToggleButton from './ui/ToggleButton';
+import BookCard from './BookCard';
 
 export default function RegisterBook() {
   const [mode, setMode] = useState('basic');
@@ -145,7 +146,15 @@ export default function RegisterBook() {
         </button>
       </form>
       <ul>
-        {result && result.map((book) => <li key={book.id}>{book.title}</li>)}
+        {result &&
+          result.map((book) => (
+            <li key={book.id} className="p-4">
+              <BookCard book={book} />
+              <button className="w-full p-1 my-1 rounded text-white bg-brand-light hover:bg-brand">
+                Register
+              </button>
+            </li>
+          ))}
       </ul>
     </section>
   );
