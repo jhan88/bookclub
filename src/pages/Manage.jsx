@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RegisterBook from '../components/RegisterBook';
-import DeleteBook from '../components/DeletBook';
+import DeleteBook from '../components/DeleteBook';
 import ToggleButton from '../components/ui/ToggleButton';
 
 export default function Manage() {
