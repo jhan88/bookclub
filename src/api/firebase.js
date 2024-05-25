@@ -6,6 +6,7 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
+import { get, getDatabase, ref, set } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_apiKey,
@@ -31,4 +32,32 @@ export async function userSignOut() {
 
 export async function getUser(callback) {
   return onAuthStateChanged(auth, callback);
+}
+
+const database = getDatabase(app);
+
+export async function readInventory(id) {
+  return await get(ref(database, 'inventory/' + (id ? id : ''))).then(
+    (snapshot) => {
+      if (snapshot.exists()) {
+        return snapshot.val();
+      } else {
+        return {};
+      }
+    }
+  );
+}
+
+export async function isRegistered(id) {
+  return await readInventory(id).then((data) => Object.keys(data).length > 0);
+}
+
+export async function registerBook(book) {
+  return await isRegistered(book.id).then((result) => {
+    return result
+      ? 'Already registered'
+      : set(ref(database, 'inventory/' + book.id), book).then(() => {
+          return 'Success!';
+        });
+  });
 }

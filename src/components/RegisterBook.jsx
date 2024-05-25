@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { search } from '../api/books';
 import ToggleButton from './ui/ToggleButton';
 import BookCard from './BookCard';
+import { registerBook } from '../api/firebase';
 
 export default function RegisterBook() {
   const [mode, setMode] = useState('basic');
@@ -41,6 +42,12 @@ export default function RegisterBook() {
   const handleChange = (e) => {
     setKeyword((prev) => {
       return { ...prev, [e.target.id]: e.target.value };
+    });
+  };
+
+  const handleRegister = (book) => {
+    registerBook(book).then((message) => {
+      console.log(message);
     });
   };
 
@@ -150,7 +157,10 @@ export default function RegisterBook() {
           result.map((book) => (
             <li key={book.id} className="p-4">
               <BookCard book={book} />
-              <button className="w-full p-1 my-1 rounded text-white bg-brand-light hover:bg-brand">
+              <button
+                onClick={() => handleRegister(book)}
+                className="w-full p-1 my-1 rounded text-white bg-brand-light hover:bg-brand"
+              >
                 Register
               </button>
             </li>
