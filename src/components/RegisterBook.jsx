@@ -3,6 +3,7 @@ import { search } from '../api/books';
 import ToggleButton from './ui/ToggleButton';
 import BookCard from './BookCard';
 import { registerBook } from '../api/firebase';
+import { createPortal } from 'react-dom';
 
 export default function RegisterBook() {
   const [mode, setMode] = useState('basic');
@@ -16,6 +17,7 @@ export default function RegisterBook() {
     country: '',
     langRestrict: '',
   });
+  const [message, setMessage] = useState('');
 
   const { q, intitle, inauthor, inpublisher, isbn, country, langRestrict } =
     keyword;
@@ -47,7 +49,8 @@ export default function RegisterBook() {
 
   const handleRegister = (book) => {
     registerBook(book).then((message) => {
-      console.log(message);
+      setMessage(message);
+      setTimeout(() => setMessage(''), 3000);
     });
   };
 
@@ -166,6 +169,13 @@ export default function RegisterBook() {
             </li>
           ))}
       </ul>
+      {message &&
+        createPortal(
+          <p className="fixed bottom-0 p-2 w-full bg-brand text-center text-lg text-white font-semibold opacity-70">
+            {message}
+          </p>,
+          document.body
+        )}
     </section>
   );
 }
