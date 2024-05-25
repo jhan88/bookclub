@@ -6,7 +6,7 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
-import { get, getDatabase, ref, set } from 'firebase/database';
+import { get, getDatabase, ref, remove, set } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_apiKey,
@@ -60,4 +60,8 @@ export async function registerBook(book) {
           return 'Success!';
         });
   });
+}
+
+export async function deleteBook(id) {
+  return await remove(ref(database, 'inventory/' + id));
 }
