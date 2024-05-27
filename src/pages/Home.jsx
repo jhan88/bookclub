@@ -21,7 +21,7 @@ export default function Home() {
             <li key={book.id} className="p-4">
               <BookCard book={book} />
               <button
-                onClick={() => navigate('book/' + book.id)}
+                onClick={() => navigate('book/' + book.id, { state: { book } })}
                 className="w-full p-1 my-1 rounded text-white bg-brand-light hover:bg-brand"
               >
                 Review this book
