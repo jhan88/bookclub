@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getBookReviews } from '../api/firebase';
+import ReviewCard from './ReviewCard';
 
 export default function AllReviews({ bookId }) {
   const { data: reviews } = useQuery({
@@ -17,7 +18,11 @@ export default function AllReviews({ bookId }) {
       <ul>
         {reviews &&
           Object.entries(reviews).map(([id, review]) => {
-            return <li key={id}>{/* Review Card */}</li>;
+            return (
+              <li key={id}>
+                <ReviewCard review={review} />
+              </li>
+            );
           })}
       </ul>
     </div>
