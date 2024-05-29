@@ -65,3 +65,13 @@ export async function registerBook(book) {
 export async function deleteBook(id) {
   return await remove(ref(database, 'inventory/' + id));
 }
+
+export async function getBookReviews(bookId) {
+  return await get(ref(database, 'reviews/' + bookId)).then((snapshot) => {
+    if (snapshot.exists()) {
+      return snapshot.val();
+    } else {
+      return {};
+    }
+  });
+}

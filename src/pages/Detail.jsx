@@ -1,9 +1,10 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import AllReviews from '../components/AllReviews';
 
 export default function Detail() {
   const { book } = useLocation().state;
-  const { thumbnail, title, subtitle, authors, publisher, infoLink } = book;
+  const { id, thumbnail, title, subtitle, authors, publisher, infoLink } = book;
 
   return (
     <section>
@@ -40,7 +41,7 @@ export default function Detail() {
           </a>
         </div>
       </div>
-      {/* Review component */}
+      <AllReviews bookId={id} />
     </section>
   );
 }
