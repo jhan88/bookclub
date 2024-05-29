@@ -7,6 +7,7 @@ import {
   signOut,
 } from 'firebase/auth';
 import { get, getDatabase, ref, remove, set } from 'firebase/database';
+import { v4 as uuidv4 } from 'uuid';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_apiKey,
@@ -74,4 +75,25 @@ export async function getBookReviews(bookId) {
       return {};
     }
   });
+}
+
+export async function submitReview(user, bookId, contents) {
+  const reviewId = uuidv4();
+  const { uid, photoURL, displayName } = user;
+  const timestamp = Date.now();
+
+  try {
+    await set(ref(database, 'reviews/' + bookId + '/' + reviewId), {
+      reviewer: { uid, photoURL, displayName },
+      createdAt: timestamp,
+      contents,
+    });
+    await set(
+      ref(database, 'users/' + user.uid + '/reviews/' + bookId),
+      reviewId
+    );
+  } catch (error) {
+    return error.message;
+  }
+  return 'Success!';
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import MyReview from '../components/MyReview';
 import AllReviews from '../components/AllReviews';
 
 export default function Detail() {
@@ -41,6 +42,7 @@ export default function Detail() {
           </a>
         </div>
       </div>
+      <MyReview bookId={id} />
       <AllReviews bookId={id} />
     </section>
   );
