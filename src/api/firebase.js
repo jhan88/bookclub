@@ -77,6 +77,14 @@ export async function getBookReviews(bookId) {
   });
 }
 
+export async function getUserReviewIds(uid) {
+  return await get(ref(database, 'users/' + uid + '/reviews')).then(
+    (snapshot) => {
+      return snapshot.exists() ? snapshot.val() : {};
+    }
+  );
+}
+
 export async function submitReview(user, bookId, contents) {
   const reviewId = uuidv4();
   const { uid, photoURL, displayName } = user;
@@ -92,6 +100,16 @@ export async function submitReview(user, bookId, contents) {
       ref(database, 'users/' + user.uid + '/reviews/' + bookId),
       reviewId
     );
+  } catch (error) {
+    return error.message;
+  }
+  return 'Success!';
+}
+
+export async function deleteReview(uid, bookId, reviewId) {
+  try {
+    await remove(ref(database, 'reviews/' + bookId + '/' + reviewId));
+    await remove(ref(database, 'users/' + uid + '/reviews/' + bookId));
   } catch (error) {
     return error.message;
   }

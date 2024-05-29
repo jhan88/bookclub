@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useUserContext } from '../context/UserContext';
-import { submitReview } from '../api/firebase';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { submitReview, deleteReview, getUserReviewIds } from '../api/firebase';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { createPortal } from 'react-dom';
 import UserPhoto from './ui/UserPhoto';
 
@@ -11,13 +11,28 @@ export default function MyReview({ bookId }) {
   const [contents, setContents] = useState('');
   const [message, setMessage] = useState('');
 
+  const { data: reviewId } = useQuery({
+    queryKey: [user.uid, 'review', bookId],
+    queryFn: () =>
+      getUserReviewIds(user.uid).then((ids) => {
+        return Object.keys(ids).includes(bookId) ? ids[bookId] : '';
+      }),
+    staleTime: 5 * 60 * 1000,
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
+  });
+
   const queryClient = useQueryClient();
 
   const mutationSubmit = useMutation({
     mutationFn: (contents) => {
       submitReview(user, bookId, contents);
     },
-    onSuccess: () => queryClient.invalidateQueries(['reviews', bookId]),
+    onSuccess: () =>
+      queryClient.invalidateQueries(
+        ['reviews', bookId],
+        [user.uid, 'review', bookId]
+      ),
   });
 
   const handleSubmit = (e) => {
@@ -33,6 +48,25 @@ export default function MyReview({ bookId }) {
     });
   };
 
+  const mutationDelete = useMutation({
+    mutationFn: (reviewId) => deleteReview(user.uid, bookId, reviewId),
+    onSuccess: () =>
+      queryClient.invalidateQueries(
+        ['reviews', bookId],
+        [user.uid, 'review', bookId]
+      ),
+  });
+
+  const handleDelete = () => {
+    mutationDelete.mutate(reviewId, {
+      onSuccess: () => {
+        setMessage('Success!');
+      },
+      onError: () => setMessage('Error!'),
+      onSettled: () => setTimeout(() => setMessage(''), 3000),
+    });
+  };
+
   return (
     <div className="py-4">
       <h1 className="my-4 text-xl font-bold text-center">My Review</h1>
@@ -41,7 +75,7 @@ export default function MyReview({ bookId }) {
           Please sign in first.
         </p>
       )}
-      {user && (
+      {user && !reviewId && (
         <>
           <p className="m-2 text-center text-lg font-semibold">
             Please Review this book
@@ -51,6 +85,19 @@ export default function MyReview({ bookId }) {
             className="block mx-auto w-60 p-1 my-1 rounded text-white bg-brand-light hover:bg-brand"
           >
             {showForm ? 'Close' : 'Write a review'}
+          </button>
+        </>
+      )}
+      {user && reviewId && (
+        <>
+          <p className="m-2 text-center text-lg font-semibold">
+            You've already reviewed this book
+          </p>
+          <button
+            onClick={() => handleDelete(reviewId)}
+            className="block mx-auto w-60 p-1 my-1 rounded text-white bg-brand-light hover:bg-brand"
+          >
+            Delete
           </button>
         </>
       )}
