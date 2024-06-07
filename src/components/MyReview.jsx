@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useUserContext } from '../context/UserContext';
 import { submitReview, deleteReview, isReviewed } from '../api/firebase';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createPortal } from 'react-dom';
 import UserPhoto from './ui/UserPhoto';
 
-export default function MyReview({ bookId }) {
-  const { user } = useUserContext();
+export default function MyReview({ bookId, user }) {
   const [showForm, setShowForm] = useState(false);
   const [contents, setContents] = useState('');
   const [isEditing, setIsEditing] = useState(false);
@@ -67,12 +65,6 @@ export default function MyReview({ bookId }) {
   return (
     <div className="py-4">
       <h1 className="my-4 text-xl font-bold text-center">My Review</h1>
-      {!user && (
-        <p className="m-2 text-center text-lg font-semibold">
-          Please sign in first.
-        </p>
-      )}
-
       {user && !reviewed && (
         <>
           <p className="m-2 text-center text-lg font-semibold">

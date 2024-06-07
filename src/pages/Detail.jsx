@@ -1,9 +1,11 @@
 import React from 'react';
+import { useUserContext } from '../context/UserContext';
 import { useLocation } from 'react-router-dom';
 import MyReview from '../components/MyReview';
 import AllReviews from '../components/AllReviews';
 
 export default function Detail() {
+  const { user } = useUserContext();
   const { book } = useLocation().state;
   const { id, thumbnail, title, subtitle, authors, publisher, infoLink } = book;
 
@@ -42,7 +44,12 @@ export default function Detail() {
           </a>
         </div>
       </div>
-      <MyReview bookId={id} />
+      {!user && (
+        <p className="m-2 text-center text-lg font-semibold">
+          Please sign in to write a review.
+        </p>
+      )}
+      {user && <MyReview bookId={id} user={user} />}
       <AllReviews bookId={id} />
     </section>
   );
