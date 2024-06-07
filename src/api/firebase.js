@@ -6,8 +6,15 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
-import { get, getDatabase, ref, remove, set } from 'firebase/database';
-import { v4 as uuidv4 } from 'uuid';
+import {
+  get,
+  getDatabase,
+  onValue,
+  ref,
+  remove,
+  set,
+  update,
+} from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_apiKey,
@@ -85,21 +92,34 @@ export async function getUserReviewIds(uid) {
   );
 }
 
-export async function submitReview(user, bookId, contents) {
-  const reviewId = uuidv4();
+export async function isReviewed(uid, bookId, callback) {
+  onValue(ref(database, 'users/' + uid + '/reviews/' + bookId), (snapshot) => {
+    callback(snapshot.exists());
+  });
+}
+
+export async function submitReview(user, bookId, contents, isEditing = false) {
   const { uid, photoURL, displayName } = user;
+  const reviewId = uid + '-review-' + bookId;
   const timestamp = Date.now();
 
   try {
-    await set(ref(database, 'reviews/' + bookId + '/' + reviewId), {
-      reviewer: { uid, photoURL, displayName },
-      createdAt: timestamp,
-      contents,
-    });
-    await set(
-      ref(database, 'users/' + user.uid + '/reviews/' + bookId),
-      reviewId
-    );
+    if (isEditing) {
+      await update(ref(database, 'reviews/' + bookId + '/' + reviewId), {
+        lastEditedAt: timestamp,
+        contents: contents,
+      });
+    } else {
+      await set(ref(database, 'reviews/' + bookId + '/' + reviewId), {
+        reviewer: { uid, photoURL, displayName },
+        createdAt: timestamp,
+        contents,
+      });
+      await set(
+        ref(database, 'users/' + user.uid + '/reviews/' + bookId),
+        reviewId
+      );
+    }
   } catch (error) {
     return error.message;
   }
