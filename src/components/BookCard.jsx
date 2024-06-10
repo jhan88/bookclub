@@ -4,7 +4,7 @@ export default function BookCard({ book }) {
   const { title, subtitle, authors, thumbnail, infoLink } = book;
 
   return (
-    <div className="basis-full h-48 flex rounded shadow">
+    <div className="basis-full h-40 sm:h-48 flex rounded shadow">
       <img
         src={thumbnail}
         alt={'thumbnail of ' + title}
@@ -12,11 +12,13 @@ export default function BookCard({ book }) {
       />
       <div className="m-2 basis-full flex flex-col justify-between">
         <hgroup>
-          <h1 className="text-xl font-semibold line-clamp-2">{title}</h1>
-          {subtitle && <h2 className="text-lg line-clamp-1">{subtitle}</h2>}
+          <h1 className="text-lg md:text-xl font-semibold line-clamp-2">
+            {title}
+          </h1>
+          {subtitle && <h2 className="md:text-lg line-clamp-1">{subtitle}</h2>}
         </hgroup>
         {authors && (
-          <p>
+          <p className="text-sm md:text-base">
             by <span className="font-bold">{authors[0]}</span>
             {authors.length > 1 ? ' et al.' : ''}
           </p>
