@@ -1,52 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import { submitReview, deleteReview, isReviewed } from '../api/firebase';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import UserPhoto from './ui/UserPhoto';
+import useReview from '../hooks/useReview';
 
 export default function MyReview({ bookId, user }) {
   const [showForm, setShowForm] = useState(false);
   const [contents, setContents] = useState('');
   const [isEditing, setIsEditing] = useState(false);
-  const [reviewed, setReviewed] = useState(false);
   const [message, setMessage] = useState('');
 
-  useEffect(() => {
-    isReviewed(user.uid, bookId, setReviewed);
-  }, [user, bookId]);
-
-  const reviewId = user.uid + '-review-' + bookId;
-
-  const queryClient = useQueryClient();
-
-  const mutationSubmit = useMutation({
-    mutationFn: (contents) => {
-      submitReview(user, bookId, contents, isEditing);
-    },
-    onSuccess: () => queryClient.invalidateQueries(['reviews', bookId]),
+  const { reviewed, reviewId, prevReview, submit, remove } = useReview({
+    bookId,
+    user,
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    mutationSubmit.mutate(contents, {
-      onSuccess: () => {
-        setContents('');
-        setMessage('Success!');
-        setShowForm(false);
-        setIsEditing(false);
-      },
-      onError: () => setMessage('Error!'),
-      onSettled: () => setTimeout(() => setMessage(''), 3000),
-    });
+    submit.mutate(
+      { contents, isEditing },
+      {
+        onSuccess: () => {
+          setContents('');
+          setMessage('Success!');
+          setShowForm(false);
+          setIsEditing(false);
+        },
+        onError: () => setMessage('Error!'),
+        onSettled: () => setTimeout(() => setMessage(''), 3000),
+      }
+    );
   };
 
-  const mutationDelete = useMutation({
-    mutationFn: (reviewId) => deleteReview(user.uid, bookId, reviewId),
-    onSuccess: () => queryClient.invalidateQueries(['reviews', bookId]),
-  });
-
   const handleDelete = () => {
-    mutationDelete.mutate(reviewId, {
+    remove.mutate(reviewId, {
       onSuccess: () => {
         setMessage('Success!');
       },
@@ -56,9 +42,8 @@ export default function MyReview({ bookId, user }) {
   };
 
   const handleEdit = () => {
-    const reviewInfo = queryClient.getQueryData(['reviews', bookId]);
     setIsEditing(true);
-    setContents(reviewInfo[reviewId].contents);
+    setContents(prevReview().contents);
     setShowForm((prev) => !prev);
   };
 
