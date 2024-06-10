@@ -23,12 +23,20 @@ export default function useReview({ bookId, user }) {
     mutationFn: ({ contents, isEditing }) => {
       submitReview(user, bookId, contents, isEditing);
     },
-    onSuccess: () => queryClient.invalidateQueries(['reviews', bookId]),
+    onSuccess: () =>
+      queryClient.invalidateQueries(
+        ['reviews', bookId],
+        ['reviewIds', user.uid]
+      ),
   });
 
   const remove = useMutation({
     mutationFn: (reviewId) => deleteReview(user.uid, bookId, reviewId),
-    onSuccess: () => queryClient.invalidateQueries(['reviews', bookId]),
+    onSuccess: () =>
+      queryClient.invalidateQueries(
+        ['reviews', bookId],
+        ['reviewIds', user.uid]
+      ),
   });
 
   return { reviewed, reviewId, prevReview, submit, remove };
