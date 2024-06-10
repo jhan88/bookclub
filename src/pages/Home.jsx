@@ -32,7 +32,12 @@ export default function Home() {
           active={viewMode === 'grid'}
         />
       </aside>
-      <ul className={(viewMode === 'grid' ? 'grid ' : '') + 'grid-cols-4'}>
+      <ul
+        className={
+          (viewMode === 'grid' ? 'grid ' : '') +
+          'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
+        }
+      >
         {inventory &&
           Object.values(inventory).map((book) => (
             <li key={book.id} className="p-4">

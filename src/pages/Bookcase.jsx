@@ -43,7 +43,12 @@ export default function Bookcase() {
           active={viewMode === 'grid'}
         />
       </aside>
-      <ul className={(viewMode === 'grid' ? 'grid ' : '') + 'grid-cols-4'}>
+      <ul
+        className={
+          (viewMode === 'grid' ? 'grid ' : '') +
+          'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
+        }
+      >
         {inventory &&
           reviewed &&
           Object.values(inventory)
