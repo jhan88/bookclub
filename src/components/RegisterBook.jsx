@@ -4,7 +4,7 @@ import ToggleButton from './ui/ToggleButton';
 import BookCard from './BookCard';
 import { registerBook } from '../api/firebase';
 import { createPortal } from 'react-dom';
-
+import { v4 as uuidv4 } from 'uuid';
 export default function RegisterBook() {
   const [mode, setMode] = useState('basic');
   const [result, setResult] = useState();
@@ -158,7 +158,7 @@ export default function RegisterBook() {
       <ul>
         {result &&
           result.map((book) => (
-            <li key={book.id} className="p-4">
+            <li key={uuidv4()} className="p-4">
               <BookCard book={book} />
               <button
                 onClick={() => handleRegister(book)}
