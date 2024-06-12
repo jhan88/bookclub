@@ -15,18 +15,20 @@ export default function Detail() {
         <img
           src={thumbnail}
           alt={'thumbnail of ' + title}
-          className="m-2 w-32 object-contain"
+          className="m-2 w-28 sm:w-32 object-contain"
         />
         <div className="m-2 basis-full flex flex-col justify-between">
           <hgroup>
-            <h1 className="text-3xl font-bold">{title}</h1>
-            {subtitle && <h2 className="text-2xl font-semibold">{subtitle}</h2>}
+            <h1 className="text-2xl sm:text-3xl font-bold">{title}</h1>
+            {subtitle && (
+              <h2 className="text-xl sm:text-2xl font-semibold">{subtitle}</h2>
+            )}
           </hgroup>
 
           {authors && (
             <p>
               {authors.map((author) => (
-                <span className="inline-block mx-2 font-semibold text-lg">
+                <span className="inline-block mx-2 font-semibold sm:text-lg">
                   {author}
                 </span>
               ))}
