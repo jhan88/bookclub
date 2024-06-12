@@ -38,7 +38,7 @@ export async function search(keyword) {
           const {
             id,
             volumeInfo: {
-              imageLinks: { thumbnail },
+              imageLinks,
               title,
               subtitle,
               authors,
@@ -51,7 +51,11 @@ export async function search(keyword) {
 
           return {
             id,
-            thumbnail: thumbnail || null,
+            thumbnail: imageLinks
+              ? imageLinks.thumbnail
+                ? imageLinks.thumbnail
+                : null
+              : null,
             title,
             subtitle: subtitle || null,
             authors: authors || null,
