@@ -7,7 +7,7 @@ export default function Header() {
   const { user, signIn, signOut } = useUserContext();
 
   return (
-    <header className="p-4 flex justify-between items-center bg-brand-dark text-white">
+    <header className="sticky top-0 z-10 p-4 flex justify-between items-center bg-brand-dark text-white">
       <h1 className="p-1 font-bold text-lg">
         <Link to="/">Bookclub</Link>
       </h1>
