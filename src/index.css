@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root {
-  @apply w-full max-w-screen-lg m-auto;
+  @apply w-full max-w-screen-lg m-auto flex flex-col;
 }
 
 body {
@@ -21,7 +21,7 @@ code {
 }
 
 section {
-  @apply p-4;
+  @apply p-4 w-full min-h-dvh m-auto;
 }
 
 @layer components {
