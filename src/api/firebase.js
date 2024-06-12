@@ -61,13 +61,15 @@ export async function isRegistered(id) {
 }
 
 export async function registerBook(book) {
-  return await isRegistered(book.id).then((result) => {
-    return result
-      ? 'Already registered'
-      : set(ref(database, 'inventory/' + book.id), book).then(() => {
-          return 'Success!';
-        });
-  });
+  return await isRegistered(book.id)
+    .then((result) => {
+      return result
+        ? 'Already registered'
+        : set(ref(database, 'inventory/' + book.id), book).then(() => {
+            return 'Success!';
+          });
+    })
+    .catch((error) => error.message);
 }
 
 export async function deleteBook(id) {

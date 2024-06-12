@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { search } from '../api/books';
 import ToggleButton from './ui/ToggleButton';
 import BookCard from './BookCard';
-import { registerBook } from '../api/firebase';
 import { createPortal } from 'react-dom';
 import { v4 as uuidv4 } from 'uuid';
+import useInventory from '../hooks/useInventory';
 export default function RegisterBook() {
   const [mode, setMode] = useState('basic');
   const [result, setResult] = useState();
@@ -21,6 +21,8 @@ export default function RegisterBook() {
 
   const { q, intitle, inauthor, inpublisher, isbn, country, langRestrict } =
     keyword;
+
+  const { register } = useInventory();
 
   const resetKeyword = () =>
     setKeyword({
@@ -48,9 +50,14 @@ export default function RegisterBook() {
   };
 
   const handleRegister = (book) => {
-    registerBook(book).then((message) => {
-      setMessage(message);
-      setTimeout(() => setMessage(''), 3000);
+    register.mutate(book, {
+      onSuccess: (message) => {
+        setMessage(message);
+      },
+      onError: (errorMessage) => {
+        setMessage(errorMessage);
+      },
+      onSettled: () => setTimeout(() => setMessage(''), 3000),
     });
   };
 
