@@ -12,11 +12,15 @@ export default function Detail() {
   return (
     <section>
       <div className="flex">
-        <img
-          src={thumbnail}
-          alt={'thumbnail of ' + title}
-          className="m-2 w-28 sm:w-32 object-contain"
-        />
+        {thumbnail ? (
+          <img
+            src={thumbnail}
+            alt={'thumbnail of ' + title}
+            className="m-2 w-28 sm:w-32 object-contain"
+          />
+        ) : (
+          <div className="m-2 w-28 sm:w-32 aspect-[2/3] bg-gray-100"></div>
+        )}
         <div className="m-2 basis-full flex flex-col justify-between">
           <hgroup>
             <h1 className="text-2xl sm:text-3xl font-bold">{title}</h1>

@@ -5,11 +5,15 @@ export default function BookCard({ book }) {
 
   return (
     <div className="basis-full h-40 sm:h-48 flex rounded shadow">
-      <img
-        src={thumbnail}
-        alt={'thumbnail of ' + title}
-        className="m-2 aspect-[2/3] object-contain hover:scale-105"
-      />
+      {thumbnail ? (
+        <img
+          src={thumbnail}
+          alt={'thumbnail of ' + title}
+          className="m-2 aspect-[2/3] object-contain hover:scale-105"
+        />
+      ) : (
+        <div className="m-2 aspect-[2/3] bg-gray-100"></div>
+      )}
       <div className="m-2 basis-full flex flex-col justify-between">
         <hgroup>
           <h1 className="text-lg md:text-xl font-semibold line-clamp-2">

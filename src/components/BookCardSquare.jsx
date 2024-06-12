@@ -14,11 +14,15 @@ export default function BookCardSquare({ book }) {
           </p>
         )}
       </div>
-      <img
-        src={thumbnail}
-        alt={'thumbnail of ' + title}
-        className="max-h-40 sm:max-h-48 aspect-[2/3] object-contain"
-      />
+      {thumbnail ? (
+        <img
+          src={thumbnail}
+          alt={'thumbnail of ' + title}
+          className="max-h-40 sm:max-h-48 aspect-[2/3] object-contain"
+        />
+      ) : (
+        <div className="m-2 aspect-[2/3] bg-gray-100"></div>
+      )}
     </div>
   );
 }
