@@ -13,7 +13,7 @@ export default function ReviewCard({ review }) {
           <p className="text-sm">
             {new Date(createdAt).toLocaleString('en-US')}{' '}
             {lastEditedAt && (
-              <i>
+              <i className="block sm:inline-block">
                 (Last modified at{' '}
                 {new Date(lastEditedAt).toLocaleString('en-US')})
               </i>
