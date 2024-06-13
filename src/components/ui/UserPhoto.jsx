@@ -11,7 +11,7 @@ export default function UserPhoto({ user }) {
     );
   } else {
     return (
-      <div className="w-8 h-8 rounded-full bg-brand-light leading-8 text-lg text-center">
+      <div className="w-8 h-8 rounded-full bg-brand-light leading-8 text-lg text-center shrink-0">
         ?
       </div>
     );
