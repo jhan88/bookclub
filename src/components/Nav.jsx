@@ -17,6 +17,9 @@ export default function Nav({ user }) {
     mql.addEventListener('change', toggleDropdown);
 
     setOpen(false);
+
+    window.scrollTo(0, 0);
+
     return () => mql.removeEventListener('change', toggleDropdown);
   }, [location]);
 
