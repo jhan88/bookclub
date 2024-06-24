@@ -9,6 +9,9 @@ module.exports = {
         'brand-light': '#8697C4',
         'brand-accent': '#ADBBDA',
       },
+      backgroundImage: {
+        banner: `url('../public/images/banner.jpg')`,
+      },
     },
   },
   plugins: [],

@@ -20,6 +20,16 @@ export default function Home() {
 
   return (
     <section>
+      <div className="mb-4 mx-auto w-full h-96">
+        <img
+          className="w-full h-full bg-cover bg-banner opacity-60 blur-sm"
+          alt="banner"
+        />
+        <div className="w-full text-center -translate-y-56 text-brand-dark">
+          <h1 className="mb-4 text-3xl font-extrabold">Bookclub</h1>
+          <p className="text-xl font-semibold">for building reading routine</p>
+        </div>
+      </div>
       <aside className="block text-right">
         <ToggleButton
           text={<IoListOutline className="text-2xl" />}
