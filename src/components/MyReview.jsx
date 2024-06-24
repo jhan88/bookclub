@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { createPortal } from 'react-dom';
 import UserPhoto from './ui/UserPhoto';
 import useReview from '../hooks/useReview';
+import Popup from './Popup';
 
 export default function MyReview({ bookId, user }) {
   const [showForm, setShowForm] = useState(false);
@@ -19,13 +19,13 @@ export default function MyReview({ bookId, user }) {
     submit.mutate(
       { contents, isEditing },
       {
-        onSuccess: () => {
+        onSuccess: (message) => {
           setContents('');
-          setMessage('Success!');
+          setMessage(message);
           setShowForm(false);
           setIsEditing(false);
         },
-        onError: () => setMessage('Error!'),
+        onError: (errorMessage) => setMessage(errorMessage),
         onSettled: () => setTimeout(() => setMessage(''), 3000),
       }
     );
@@ -33,10 +33,10 @@ export default function MyReview({ bookId, user }) {
 
   const handleDelete = () => {
     remove.mutate(reviewId, {
-      onSuccess: () => {
-        setMessage('Success!');
+      onSuccess: (message) => {
+        setMessage(message);
       },
-      onError: () => setMessage('Error!'),
+      onError: (errorMessage) => setMessage(errorMessage),
       onSettled: () => setTimeout(() => setMessage(''), 3000),
     });
   };
@@ -112,13 +112,7 @@ export default function MyReview({ bookId, user }) {
           </div>
         </form>
       )}
-      {message &&
-        createPortal(
-          <p className="fixed bottom-0 p-2 w-full bg-brand text-center text-lg text-white font-semibold opacity-70">
-            {message}
-          </p>,
-          document.body
-        )}
+      <Popup message={message} />
     </div>
   );
 }

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { search } from '../api/books';
 import ToggleButton from './ui/ToggleButton';
 import BookCard from './BookCard';
-import { createPortal } from 'react-dom';
 import { v4 as uuidv4 } from 'uuid';
 import useInventory from '../hooks/useInventory';
+import Popup from './Popup';
 export default function RegisterBook() {
   const [mode, setMode] = useState('basic');
   const [result, setResult] = useState();
@@ -176,13 +176,7 @@ export default function RegisterBook() {
             </li>
           ))}
       </ul>
-      {message &&
-        createPortal(
-          <p className="fixed bottom-0 p-2 w-full bg-brand text-center text-lg text-white font-semibold opacity-70">
-            {message}
-          </p>,
-          document.body
-        )}
+      <Popup message={message} />
     </section>
   );
 }
